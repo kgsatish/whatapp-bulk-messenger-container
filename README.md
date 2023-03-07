@@ -8,12 +8,14 @@ Refer to requirements.txt for the dependencies.
 ## Installation
 
 To create selenium-chrome image in Google artifact registry
-```docker pull selenium/standalone-chrome
+```
+docker pull selenium/standalone-chrome
 docker tag selenium/standalone-chrome <region>-docker.pkg.dev/<project-id>/<repository>/selenium-chrome
 docker push <region>-docker.pkg.dev/<project-id>/<repository>/selenium-chrome
 ```
 To create whatsapp messenger image in Google artifact registry
-```docker build . --tag whatsapp:latest
+```
+docker build . --tag whatsapp:latest
 docker image tag whatsapp <region>-docker.pkg.dev/<project-id>/<repository>/whatsapp
 docker push <region>-docker.pkg.dev/<project-id>/<repository>/whatsapp
 ```
