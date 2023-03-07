@@ -20,10 +20,10 @@ docker push <region>-docker.pkg.dev/<project-id>/<repository>/whatsapp
 
 After the images are created, deploy them in GKE into 'whatsapp-cluster' and create a workload 'whatsapp' following the steps mentioned [here](https://cloud.google.com/kubernetes-engine/docs/tutorials/hello-app).
 1. Deploy both the images as two containers in the same pod (using 'Workloads' deploy in 'Kubernetes engine' navigation link in the Google console)
-2. Expose 4444:4444, 7900:7900 and 8080:8080 ports. 4444 is the Selenium Grid port where the WebDriver calls are made and 7900 is the noVNC port to see what is happening inside the selenium-chrome container. 8080 port is the WhatsApp Messenger port invoked using http://<external ip>:8080
+2. Expose 4444:4444, 7900:7900 and 8080:8080 ports. 4444 is the Selenium Grid port where the WebDriver calls are made and 7900 is the noVNC port to see what is happening inside the selenium-chrome container. 8080 port is the WhatsApp Messenger port invoked using http://\<external ip\>:8080
 
 ## Usage
-Get the external ip from clusters->whatsapp-cluster->overview and then, invoke http://<external ip>:8080 in the browser. Login to http://<external ip>:7900 with 'secret' as the password. You will see the whatsapp login screen with QR code displayed. Scan the QR code using whatsapp -> linked devices from your mobile to login.  
+Get the external ip from clusters->whatsapp-cluster->overview and then, invoke http://\<external ip\>:8080 in the browser. Login to http://\<external ip\>:7900 with 'secret' as the password. You will see the whatsapp login screen with QR code displayed. Scan the QR code using whatsapp -> linked devices from your mobile to login.  
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. Reach me on satishkg@yahoo.com for any queries
